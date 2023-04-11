@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components';
+import { Test } from '../src/components/test'
 
-function App() {
+const Container = styled.div`
+  display : flex;
+  background-color : red;
+`;
+
+const Div1 = styled.div`
+  flex : 5;
+`;
+
+const Div2 = styled.div`
+  flex : 5;
+`;
+
+const Button = styled.button`
+  color : green;
+`;
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+    <Div1>
+      <Button>Dark Mode</Button>
+    </Div1>
+    <Div2>
+      <Test />
+      <Test />
+      <Test />
+      <Test />
+      <Test />
+      <Test />
+      <Test />
+      <Test />
+    </Div2>
+    </Container>
+  )
 }
-
-export default App;
